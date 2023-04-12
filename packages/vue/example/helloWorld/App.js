@@ -4,7 +4,7 @@ const count = ref(0);
 
 const HelloWorld = {
   name: "HelloWorld",
-  setup() {},
+  setup() { },
   // TODO 第一个小目标
   // 可以在使用 template 只需要有一个插值表达式即
   // 可以解析 tag 标签
@@ -13,6 +13,10 @@ const HelloWorld = {
   //   需要编译成 render 函数
   // `,
   render() {
+    setTimeout(() => {
+      count.value += 1
+    }, 1000);
+
     return h(
       "div",
       { tId: "helloWorld" },
@@ -23,7 +27,7 @@ const HelloWorld = {
 
 export default {
   name: "App",
-  setup() {},
+  setup() { },
 
   render() {
     return h("div", { tId: 1 }, [h("p", {}, "主页"), h(HelloWorld)]);

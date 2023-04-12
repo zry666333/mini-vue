@@ -1,9 +1,5 @@
 // 组件 provide 和 inject 功能
-import {
-  h,
-  provide,
-  inject,
-} from "../../dist/mini-vue.esm-bundler.js";
+import { h, provide, inject } from "../../dist/mini-vue.esm-bundler.js";
 
 const ProviderOne = {
   setup() {
